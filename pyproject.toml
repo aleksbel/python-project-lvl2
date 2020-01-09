@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aleksbel_gen_diff"
-version = "0.1.0"
+version = "0.1.1"
 description = ""
 authors = ["Aleks Bel <aleksb2001@mail.ru>"]
 packages = [
