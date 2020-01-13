@@ -12,7 +12,6 @@ python = "^3.6"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.7"
-aleksbel_gen_diff = "^0.1.2"
 
 [tool.poetry.scripts]
 gendiff = "gen_diff.scripts.gendiff:main"
