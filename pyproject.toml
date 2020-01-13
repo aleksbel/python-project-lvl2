@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "aleksbel_gen_diff"
-version = "0.1.1"
+version = "0.1.2"
 description = ""
 authors = ["Aleks Bel <aleksb2001@mail.ru>"]
 packages = [
@@ -12,6 +12,7 @@ python = "^3.6"
 
 [tool.poetry.dev-dependencies]
 flake8 = "^3.7"
+aleksbel_gen_diff = "^0.1.2"
 
 [tool.poetry.scripts]
 gendiff = "gen_diff.scripts.gendiff:main"
