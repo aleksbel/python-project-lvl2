@@ -24,7 +24,8 @@ def generate_diff(path_to_file1, path_to_file2):
         else:
             comparison_result['+ ' + k] = before_json[k]
             comparison_result['- ' + k] = after_json[k]
-    comparison_result = str(comparison_result)
+    # convert to sring
+    comparison_result = json.dumps(comparison_result)
     return comparison_result
 
 
