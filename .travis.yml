@@ -1,3 +1,9 @@
+# single test suite, non-parallel build.
+
+env:
+  global:
+    - CC_TEST_REPORTER_ID=58474bdd7fe6297245e161cba2e073e1f0fc149e8344a4872e3d6ee40b5e8369
+
 language: python
 python: 3.6
 
