@@ -2,8 +2,8 @@
 
 
 import json
-import yaml
 from .parsers import arguments_parsing
+from .parsers import file_parsing
 
 
 def print_diff(*args):
@@ -22,19 +22,8 @@ def generate_diff(*args):
     else:
         path_to_file1 = args[0]
         path_to_file2 = args[1]
-    # Open files
-    before_file = open(path_to_file1)
-    after_file = open(path_to_file2)
-    # Defining a parser
-    if path_to_file1.endswith('yml'):
-        parser = yaml.full_load
-    elif path_to_file1.endswith('json'):
-        parser = json.load
-    else:
-        print('Unknown file extension')
-    # Convert files to python objects
-    before_json = parser(before_file)
-    after_json = parser(after_file)
+    # Open and parsing files
+    before_json, after_json = file_parsing(path_to_file1, path_to_file2)
     # Convert keys to sets
     keys_before_file = set(list(before_json.keys()))
     keys_after_file = set(list(after_json.keys()))
@@ -63,7 +52,8 @@ def generate_diff(*args):
             for_print2['- ' + k] = after_json[k]
     print_diff(for_print1, for_print2, for_print3, for_print4)
     # Combining dictionaries
-    comparison_result = for_print1
+    comparison_result = {}
+    comparison_result.update(for_print1)
     comparison_result.update(for_print2)
     comparison_result.update(for_print3)
     comparison_result.update(for_print4)
