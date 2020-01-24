@@ -6,3 +6,6 @@ Badges
 
 PR2 Step3
 <a href="https://asciinema.org/a/293405" target="_blank"><img src="https://asciinema.org/a/293405.svg" /></a>
+
+PR2 Step5
+<a href="https://asciinema.org/a/MSJiCx64L27y6P83tKzoNyQqH" target="_blank"><img src="https://asciinema.org/a/MSJiCx64L27y6P83tKzoNyQqH.svg" /></a>
